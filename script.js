@@ -35,8 +35,14 @@ $(".btn-primary").click(function(){
         buttons();
 
         $("#city").text(response.name);
-        $("#wind").text("Wind: "+response.wind.speed+" MPH");
-        $("#humidity").text("Humidity: "+response.main.humidity+"%");
-        $("#temp").text("Temperature: "+(((response.main.temp)-273.15)*1.80+32).toFixed(2)+ " F");
+        $("#wind").text(" "+response.wind.speed+" MPH");
+        $("#humidity").text(" "+response.main.humidity+"%");
+        $("#temp").text(" "+(((response.main.temp)-273.15)*1.80+32).toFixed(2)+ " F");
     });
 });
+
+$(".cityList").click(function(){
+    event.target(
+        console.log(this)
+    )
+})

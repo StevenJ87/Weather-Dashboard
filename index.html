@@ -14,25 +14,27 @@
     </header>
 <div class="container" >
     <div class="row">
-        <div class="col-lg-2" id="citySearch">
+        <div class="col-lg-4" id="citySearch">
                 <input placeholder="City Name" class="searchName" type="text">
                 <button type="button" class="btn btn-primary">Search</button>
             <ul class="cityList">
 
             </ul>
         </div>
-        <div class="col-lg-6 results">
+        <div class="col-lg-7 results">
             <div class="row today" >
                 <ul>
                  <h1 id="city" ></h1>
                  <p id="date">Tuesday 06/30/2020</p>
                  <p>sunny <span id="symbol"></span></p>
-                 <p id="temp"></p>
-                 <p><span id="humidity"></span></p>
-                 <p><span id="wind"></span></p>
+                 <p>Temperature:<span id="temp"></span></p>
+                 <p>Humidity:<span id="humidity"></span></p>
+                 <p>Wind:<span id="wind"></span></p>
                  <p>UV Index: <span id="UV"></span></p>
                 </ul>
             </div>
+        </div> 
+    </div>       
             <div class="row future">
                 <div class="col-lg-2 day">
                     <p id="futureDate">Wednesday 07/31/2020</p>
@@ -65,9 +67,7 @@
                     <p>Humidity: <span id="futureHumidity"></span></p>
                 </div>
             </div>
-
-        </div>
-    </div>
+    
 </div>
 
     
