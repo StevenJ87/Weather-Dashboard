@@ -1,15 +1,15 @@
-    var cities = [];
-    var saved = JSON.parse(localStorage.getItem('ListNames'));
-    cities=saved;
-    buttons();
 
-function buttons(){
-    
-    if(cities.length>0){
+var cities = [""];
+var saved = JSON.parse(localStorage.getItem('ListNames'));
+cities=saved;
+
+buttons();
+
+    function buttons(){
     for(var i=0;i<cities.length;i++){
     $(".cityList").append("<li>").append($("<button>").text(cities[i]));
 }};
-}
+
 
 $(".btn-primary").click(function(){
 
