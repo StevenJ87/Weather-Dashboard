@@ -1,0 +1,44 @@
+header{
+    font-size: 30px;
+    background-color: #0096c7;
+    text-align: center;
+    height: 80px;
+    border: solid 2px #023e8a;
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: #48cae4;
+}
+
+.container{
+    max-width: 90%;
+    float: left;
+}
+
+#citySearch{
+    
+    border: solid 2px #023e8a;
+    background-color: #0096c7;
+    margin: 0 auto;
+    padding: 5px;
+    
+}
+
+.day{
+    border: solid 2px #023e8a;
+    background-color: #0096c7;
+    float: right;
+    margin: 0 auto;
+}
+
+.future{
+    margin-top: 10px;
+}
+
+.today{
+    border: solid 2px #023e8a;
+    background-color: #0096c7;
+    margin: 0 auto;
+    padding: 5px;
+}
