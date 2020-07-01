@@ -1,9 +1,11 @@
-
-var cities = [""];
+var cities = [];
 var saved = JSON.parse(localStorage.getItem('ListNames'));
-cities=saved;
+if(saved === null){
 
-buttons();
+}else{
+    cities=saved;
+    buttons();
+};
 
     function buttons(){
     for(var i=0;i<cities.length;i++){
@@ -35,6 +37,6 @@ $(".btn-primary").click(function(){
         $("#city").text(response.name);
         $("#wind").text("Wind: "+response.wind.speed+" MPH");
         $("#humidity").text("Humidity: "+response.main.humidity+"%");
-        $("#temp").text("Temperature: "+(((response.main.temp)-273.15)*1.80+32)+ " F");
+        $("#temp").text("Temperature: "+(((response.main.temp)-273.15)*1.80+32).toFixed(2)+ " F");
     });
 });
