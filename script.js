@@ -1,13 +1,15 @@
-var cities = []
-
-$("document").ready(function(){
+    var cities = [];
+    var saved = JSON.parse(localStorage.getItem('ListNames'));
+    cities=saved;
     buttons();
-});
 
 function buttons(){
+    
+    if(cities.length>0){
     for(var i=0;i<cities.length;i++){
     $(".cityList").append("<li>").append($("<button>").text(cities[i]));
 }};
+}
 
 $(".btn-primary").click(function(){
 
@@ -26,6 +28,13 @@ $(".btn-primary").click(function(){
 
         localStorage.setItem(response.name, JSON.stringify(response));
 
+        localStorage.setItem("ListNames", JSON.stringify(cities));
+
         buttons();
+
+        $("#city").text(response.name);
+        $("#wind").text("Wind: "+response.wind.speed+" MPH");
+        $("#humidity").text("Humidity: "+response.main.humidity+"%");
+        $("#temp").text("Temperature: "+(((response.main.temp)-273.15)*1.80+32)+ " F");
     });
 });
